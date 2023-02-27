@@ -75,6 +75,10 @@ body {
   height: 50px;
 }
 
+#navbarResponsive {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .nav a:not(:first-child) {
     display: none;

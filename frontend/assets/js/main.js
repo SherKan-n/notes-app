@@ -56,6 +56,8 @@ function startPage() {
 
 function initializeButtons() {
    //----------Open Register----------
+   $("#navbarResponsive").show();
+   //----------Open Register----------
    document.getElementById('register').addEventListener('click', User.openRegister);
    //----------Open Login----------
    document.getElementById('login').addEventListener('click', User.openLogin);
