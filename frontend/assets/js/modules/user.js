@@ -15,7 +15,7 @@ class User {
    }
    //--------------------------------
    static registerUser(userData) {
-      axios.post(`http://localhost:3000/notes/user/register`, userData).then((response) => {
+      axios.post(`notes/user/register`, userData).then((response) => {
          if (response.data.success) {
             const data = {
                ...userData,
@@ -42,7 +42,7 @@ class User {
    }
    //--------------------------------
    static loginUser(userData) {
-      axios.post(`http://localhost:3000/notes/user/login`, userData).then((response) => {
+      axios.post(`notes/user/login`, userData).then((response) => {
          if (response.data.success) {
             const data = {
                ...response.data.userStats,

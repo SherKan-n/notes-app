@@ -45,7 +45,7 @@ class Note {
       if (!userStats) return;
 
       noteData.uid = userStats.id;
-      axios.post(`http://localhost:3000/notes/note/add`, noteData).then((response) => {
+      axios.post(`notes/note/add`, noteData).then((response) => {
          if (response.data.success) Note.refreshNotesContainer();
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -57,7 +57,7 @@ class Note {
       if (!userStats) return;
       if (userStats.id != uid) return;
 
-      axios.post(`http://localhost:3000/notes/note/delete`, { id: id, uid: uid }).then((response) => {
+      axios.post(`notes/note/delete`, { id: id, uid: uid }).then((response) => {
          if (response.data.success) Note.refreshNotesContainer();
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -75,7 +75,7 @@ class Note {
          type: "completed",
          typeLevel: -1
       }
-      axios.post(`http://localhost:3000/notes/note/completed`, notePayload).then((response) => {
+      axios.post(`notes/note/completed`, notePayload).then((response) => {
          if (response.data.success) Note.refreshNotesContainer();
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -87,7 +87,7 @@ class Note {
       if (!userStats) return;
 
       return new Promise((res, rej) => {
-         axios.get(`http://localhost:3000/notes/note/get/all/${userStats.id}`).then((response) => {
+         axios.get(`notes/note/get/all/${userStats.id}`).then((response) => {
             if (response.data.success) res(response.data);
          }).catch(() => { });
       })

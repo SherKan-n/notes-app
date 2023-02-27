@@ -56,7 +56,7 @@ class Folder {
       if (!userStats) return;
 
       folderData.uid = userStats.id;
-      axios.post(`http://localhost:3000/notes/folder/add`, folderData).then((response) => {
+      axios.post(`notes/folder/add`, folderData).then((response) => {
          if (response.data.success) Folder.refreshFoldersContainer(), Note.refreshNotesContainer()
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -68,7 +68,7 @@ class Folder {
       if (!userStats) return;
       if (userStats.id != uid) return;
 
-      axios.post(`http://localhost:3000/notes/folder/delete`, { id: id, uid: uid }).then((response) => {
+      axios.post(`notes/folder/delete`, { id: id, uid: uid }).then((response) => {
          if (response.data.success) Folder.refreshFoldersContainer(), Note.refreshNotesContainer();
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -86,7 +86,7 @@ class Folder {
          type: "completed",
          typeLevel: -1
       }
-      axios.post(`http://localhost:3000/notes/folder/completed`, folderPayload).then((response) => {
+      axios.post(`notes/folder/completed`, folderPayload).then((response) => {
          if (response.data.success) Folder.refreshFoldersContainer(), Note.refreshNotesContainer();
          sendNotification(response.data.message, (response.data.success) ? ('success') : ('error'), 7);
       }).catch(() => { });
@@ -98,7 +98,7 @@ class Folder {
       if (!userStats) return;
 
       return new Promise((res, rej) => {
-         axios.get(`http://localhost:3000/notes/folder/get/all/${userStats.id}`).then((response) => {
+         axios.get(`notes/folder/get/all/${userStats.id}`).then((response) => {
             if (response.data.success) res(response.data);
          }).catch(() => { });
       })
@@ -109,7 +109,7 @@ class Folder {
       if (!userStats) return;
 
       return new Promise((res, rej) => {
-         axios.get(`http://localhost:3000/notes/folder/get/notes/${id}/${userStats.id}`).then((response) => {
+         axios.get(`notes/folder/get/notes/${id}/${userStats.id}`).then((response) => {
             if (response.data.success) res(response.data.notes);
          }).catch(() => { });
       })
