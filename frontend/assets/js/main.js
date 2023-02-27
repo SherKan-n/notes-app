@@ -30,6 +30,7 @@ function startPage() {
       setInterval(() => User.checkUserLogged(), 5000);
    }
    else {
+      renderUnloggedPage();
       generateCountries();
    }
 
@@ -55,8 +56,6 @@ function startPage() {
 
 
 function initializeButtons() {
-   //----------Open Register----------
-   $("#navbarResponsive").show();
    //----------Open Register----------
    document.getElementById('register').addEventListener('click', User.openRegister);
    //----------Open Login----------
@@ -213,6 +212,14 @@ function renderLoggedPage() {
    document.getElementById('logout').style.display = 'block';
    document.getElementsByClassName('notes-container')[0].classList.add("d-flex", "justify-content-evenly");
 }
+
+function renderUnloggedPage() {
+   document.getElementById('register').style.display = 'block';
+   document.getElementById('login').style.display = 'block';
+   document.getElementById('logout').style.display = 'none';
+   document.getElementsByClassName('notes-container')[0].classList.remove("d-flex", "justify-content-evenly");
+}
+
 
 
 
