@@ -7,6 +7,7 @@ const path = require('path');
 //---------------------------------------
 require("dotenv").config();
 //---------------------------------------
+const PORT = process.env.PORT || 3000;
 const token_mysql = process.env.MYSQL_NOTES.split("|");
 //---------------------------------------
 const pool = mysql.createPool({
@@ -194,7 +195,7 @@ app.get('/notes/folder/get/notes/:folderID/:uid', (req, res) => {
    });
 });
 //---------------------------------------
-app.listen(3000, () => console.log('Server listening on port 3000'));
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 //==============================================================================
 function getUserCount(email, connection) {
    return new Promise((res, rej) => {
