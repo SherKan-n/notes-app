@@ -75,7 +75,9 @@ body {
   height: 50px;
 }
 
-#register, #login, #logout {
+#register,
+#login,
+#logout {
   display: none;
 }
 
@@ -534,9 +536,22 @@ body {
   z-index: 1;
 }
 
-/*  */
-.about-container {
-  display: none;
+/* ---------- ABOUT ---------- */
+.gradient-underline {
+  text-shadow: 1px 1px 4px gray;
+  width: fit-content;
+  border: transparent;
+  border-bottom: 2px dotted;
+  border-image: linear-gradient(to right, rgba(0, 0, 255, 1), #c28e00 35%) 1;
+}
+
+.gradient-text {
+  word-spacing: 1px;
+}
+
+.gradient-text:hover .text {
+  font-weight: 500;
+  color: rgba(0, 0, 255, 0.6);
 }
 
 /* ---------- FOOTER ---------- */

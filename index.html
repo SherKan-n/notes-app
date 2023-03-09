@@ -48,7 +48,7 @@
          </button>
          <div class="collapse navbar-collapse d-none" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-               <li class="nav-item"><a class="nav-link" href="javascript:void(0);">About</a></li>
+               <li class="nav-item"><a class="nav-link" id="about" href="javascript:void(0);">About</a></li>
                <li class="nav-item"><a class="nav-link" id="login" href="javascript:void(0);">Login</a></li>
                <li class="nav-item"><a class="nav-link" id="register" href="javascript:void(0);">Register</a></li>
                <li class="nav-item"><a class="nav-link" id="logout" href="javascript:void(0);">Log Out</a></li>
@@ -272,19 +272,37 @@
    <!-- ---------- ABOUT ---------- -->
    <section class="about-container py-5">
       <div class="container px-4">
-         <div class="row gx-4 justify-content-center">
-            <div class="col-lg-8">
-               <h2>About this page</h2>
-               <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled
-                  so you can use it as a boilerplate or starting point for you own landing page designs! This template
-                  features:</p>
+         <div class="d-flex flex-row flex-wrap align-items-center justify-content-between">
+            <div class="col-md-7">
+               <h1 class="gradient-underline">About our services</h1>
+               <p class="lead">Bine ați venit la website-ul nostru de notițe! Aici, vă oferim posibilitatea de a crea și
+                  organiza notițe, de a le categoriza în foldere, pentru a putea să le găsiți mai ușor și pentru a le
+                  prioritiza în funcție de importanța lor.</p>
                <ul>
-                  <li>Clickable nav links that smooth scroll to page sections</li>
-                  <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                  <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar
+                  <li class="gradient-text">Avem <span class="text">cinci categorii</span> diferite de notițe, și anume
+                     informative, urgente, importante, normale și completate. <span class="text">Notițele
+                        informative</span> vă ajută să vă organizați ideile și să rețineți informații,
+                     <span class="text">notițele urgente</span> vă avertizează în legătură cu sarcini care trebuie
+                     finalizate cât mai repede, <span class="text">notițele importante</span> vă ajută să vă concentrați
+                     pe sarcinile esențiale, <span class="text">notițele normale</span> sunt cele mai frecvente și vă
+                     ajută să vă organizați munca de zi cu zi, iar <span class="text">notițele completate</span> vă
+                     permit să marcați sarcinile finalizate și să le ștergeți din listă</li>
+                  <li class="gradient-text">Acest website vă permite, de asemenea, să <span class="text">creați
+                        foldere</span> pentru a organiza notițele în modul în care doriți să le vedeți. De exemplu,
+                     puteți crea foldere pentru sarcinile de birou, proiecte personale sau sarcini de acasă</li>
+                  <li class="gradient-text"><span class="text">Înregistrarea și autentificarea</span> pe website vă
+                     permit să vă <span class="text">salvați</span> notițele și folderele și să le
+                     <span class="text">accesați de oriunde</span>. În plus, avem o interfață intuitivă și ușor de
+                     folosit, care vă permite să adăugați, să editați sau să ștergeți notițele și folderele cu ușurință
                   </li>
-                  <li>Minimal custom CSS so you are free to explore your own unique design options</li>
                </ul>
+               <p>Sperăm că acest website de notițe vă va fi de ajutor în organizarea și
+                  gestionarea sarcinilor dumneavoastră zilnice și că veți găsi utilă categorizarea notițelor în cinci
+                  categorii diferite. Vă mulțumim că ați ales să utilizați serviciile noastre!</p>
+            </div>
+            <div>
+               <img src="/frontend/images/notes.png" alt="notes" class="rounded border border-warning shadow"
+                  width="500" height="450">
             </div>
          </div>
       </div>

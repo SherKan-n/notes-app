@@ -6,12 +6,13 @@ import { delayReload, sendNotification } from "../utils/functions.js";
 class User {
    /* ================= REGISTRATION ================= */
    static openRegister() {
-      document.getElementsByClassName('register-container')[0].style.display = 'flex';
       User.closeLogin();
+      $(".about-container").hide();
+      $(".register-container").css("display", "flex");
    }
    //--------------------------------
    static closeRegister() {
-      document.getElementsByClassName('register-container')[0].style.display = 'none';
+      $(".register-container").css("display", "none");
    }
    //--------------------------------
    static registerUser(userData) {
@@ -33,12 +34,13 @@ class User {
 
    /* ================= LOGIN ================= */
    static openLogin() {
-      document.getElementsByClassName('login-container')[0].style.display = 'flex';
       User.closeRegister();
+      $(".about-container").hide();
+      $(".login-container").css("display", "flex");
    }
    //--------------------------------
    static closeLogin() {
-      document.getElementsByClassName('login-container')[0].style.display = 'none';
+      $(".login-container").css("display", "none");
    }
    //--------------------------------
    static loginUser(userData) {
@@ -82,6 +84,15 @@ class User {
       a.innerHTML = `${img.outerHTML} ${userData.name}'s notes`;
 
       divProfile.append(a);
+
+      $(divProfile).css('cursor', 'pointer').click(() => {
+         $(".about-container").fadeOut();
+         setTimeout(() => {
+            $(".notes-container").fadeIn(500);
+            $(".show-folders").fadeIn(500);
+            $(".show-notes").fadeIn(500);
+         }, 405);
+      });
 
       Note.refreshNotesContainer();
       Folder.refreshFoldersContainer();

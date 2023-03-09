@@ -56,13 +56,21 @@ function startPage() {
 
 
 function initializeButtons() {
+   //----------Open About----------
+   $("#about").click(() => {
+      User.closeLogin();
+      User.closeRegister();
+      $(".about-container").fadeIn(1200);
+      $(".show-folders").hide();
+      $(".show-notes").hide();
+      $(".notes-container").hide();
+   });
    //----------Open Register----------
-   document.getElementById('register').addEventListener('click', User.openRegister);
+   $("#register").click(User.openRegister);
    //----------Open Login----------
-   document.getElementById('login').addEventListener('click', User.openLogin);
+   $("#login").click(User.openLogin);
    //----------Log Out----------
-   document.getElementById('logout').addEventListener('click', User.logoutUser);
-   document.getElementById('logout').style.display = "none";
+   $("#logout").click(User.logoutUser);
    //----------Submit Register Form----------
    document.getElementById("formRegister").addEventListener('submit', (e) => {
       e.preventDefault();
@@ -184,6 +192,8 @@ function initializeButtons() {
       };
       Folder.addFolder(payload);
    });
+   //----------------------------------------
+   $("#logout").hide();
 }
 
 
@@ -207,17 +217,18 @@ function initializeButtons() {
 
 
 function renderLoggedPage() {
-   document.getElementById('register').style.display = 'none';
-   document.getElementById('login').style.display = 'none';
-   document.getElementById('logout').style.display = 'block';
-   document.getElementsByClassName('notes-container')[0].classList.add("d-flex", "justify-content-evenly");
+   $("#register").hide();
+   $("#login").hide();
+   $("#logout").show();
+   $(".about-container").hide();
+   $(".notes-container").show().css("display", "flex").css("justify-content", "space-evenly");
 }
 
 function renderUnloggedPage() {
-   document.getElementById('register').style.display = 'block';
-   document.getElementById('login').style.display = 'block';
-   document.getElementById('logout').style.display = 'none';
-   document.getElementsByClassName('notes-container')[0].classList.remove("d-flex", "justify-content-evenly");
+   $("#register").show();
+   $("#login").show();
+   $("#logout").hide();
+   $(".notes-container").hide();
 }
 
 
