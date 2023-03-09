@@ -537,6 +537,10 @@ body {
 }
 
 /* ---------- ABOUT ---------- */
+.about-container {
+  display: none;
+}
+
 .gradient-underline {
   text-shadow: 1px 1px 4px gray;
   width: fit-content;
@@ -549,7 +553,7 @@ body {
   word-spacing: 1px;
 }
 
-.gradient-text:hover .text {
+.gradient-text .text {
   font-weight: 500;
   color: rgba(0, 0, 255, 0.6);
 }

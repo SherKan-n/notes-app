@@ -30,7 +30,7 @@ function startPage() {
       setInterval(() => User.checkUserLogged(), 5000);
    }
    else {
-      renderUnloggedPage();
+      renderNotLoggedPage();
       generateCountries();
    }
 
@@ -194,7 +194,6 @@ function initializeButtons() {
    });
    //----------------------------------------
    $("#logout").hide();
-   $(".about-container").hide();
 }
 
 
@@ -225,7 +224,7 @@ function renderLoggedPage() {
    $(".notes-container").show().css("display", "flex").css("justify-content", "space-evenly");
 }
 
-function renderUnloggedPage() {
+function renderNotLoggedPage() {
    $("#register").show();
    $("#login").show();
    $("#logout").hide();
