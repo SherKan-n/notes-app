@@ -3,25 +3,8 @@ import { Note } from "./modules/note.js";
 import { Folder } from "./modules/folder.js";
 import { sendNotification, getItemTypeLevel } from "./utils/functions.js";
 //========================================
-
-
-
-
-
-
-
-
-
 startPage();
-
-
-
-
-
-
-
-
-
+//========================================
 function startPage() {
    initializeButtons();
 
@@ -40,13 +23,7 @@ function startPage() {
       else footer.style.display = "none";
    };
 }
-
-
-
-
-
-
-
+//========================================
 function initializeButtons() {
    //----------Open About----------
    $("#about").click(() => {
