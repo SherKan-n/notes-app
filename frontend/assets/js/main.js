@@ -217,10 +217,10 @@ function initializeButtons() {
 
 
 function renderLoggedPage() {
+   $(".about-container").hide();
    $("#register").hide();
    $("#login").hide();
    $("#logout").show();
-   $(".about-container").hide();
    $(".notes-container").show().css("display", "flex").css("justify-content", "space-evenly");
 }
 
