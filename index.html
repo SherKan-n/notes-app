@@ -21,18 +21,6 @@
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="frontend/assets/js/utils/notify.min.js"></script>
    <script type="module" src="frontend/assets/js/main.js" defer></script>
-   <script>
-      $(function () {
-         $("#dropp").draggable();
-         $("#dropp2").droppable({
-            drop: function (event, ui) {
-               $(this)
-                  .find("p")
-                  .html("Dropped!");
-            }
-         });
-      });
-   </script>
 </head>
 
 <body>
@@ -43,10 +31,10 @@
             <a class="nav-title pe-none" href="#page-top">Notes Application</a>
          </div>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
-         <div class="collapse navbar-collapse d-none" id="navbarResponsive">
+         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                <li class="nav-item"><a class="nav-link" id="about" href="javascript:void(0);">About</a></li>
                <li class="nav-item"><a class="nav-link" id="login" href="javascript:void(0);">Login</a></li>
@@ -301,8 +289,7 @@
                   categorii diferite. Vă mulțumim că ați ales să utilizați serviciile noastre!</p>
             </div>
             <div>
-               <img src="/frontend/images/notes.png" alt="notes" class="rounded border border-warning shadow"
-                  width="500" height="450">
+               <img src="/frontend/images/notes.png" alt="notes" class="rounded border border-warning shadow">
             </div>
          </div>
       </div>

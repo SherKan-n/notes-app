@@ -3,7 +3,7 @@ import { Note } from "./modules/note.js";
 import { Folder } from "./modules/folder.js";
 import { sendNotification, getItemTypeLevel } from "./utils/functions.js";
 //================================================
-$(document).ready(startPage);
+startPage();
 //================================================
 function startPage() {
    initializeButtons();

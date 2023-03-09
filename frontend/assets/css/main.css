@@ -558,6 +558,11 @@ body {
   color: rgba(0, 0, 255, 0.6);
 }
 
+.about-container img {
+  max-width: 500px;
+  width: 100%;
+}
+
 /* ---------- FOOTER ---------- */
 .footer-background {
   background-image: linear-gradient(to right, rgba(0, 0, 255, 1), #c28e00 35%);
