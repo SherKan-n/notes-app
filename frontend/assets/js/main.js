@@ -194,6 +194,7 @@ function initializeButtons() {
    });
    //----------------------------------------
    $("#logout").hide();
+   $(".about-container").hide();
 }
 
 
@@ -229,6 +230,7 @@ function renderUnloggedPage() {
    $("#login").show();
    $("#logout").hide();
    $(".notes-container").hide();
+   $(".about-container").show();
 }
 
 
