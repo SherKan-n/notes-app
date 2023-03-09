@@ -164,27 +164,7 @@ function initializeButtons() {
    //----------------------------------------
    $("#logout").hide();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//================================================
 function renderLoggedPage() {
    $(".about-container").hide();
    $("#register").hide();
@@ -192,7 +172,7 @@ function renderLoggedPage() {
    $("#logout").show();
    $(".notes-container").show().css("display", "flex").css("justify-content", "space-evenly");
 }
-
+//================================================
 function renderNotLoggedPage() {
    $("#register").show();
    $("#login").show();
@@ -200,21 +180,7 @@ function renderNotLoggedPage() {
    $(".notes-container").hide();
    $(".about-container").show();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//================================================
 
 
 
