@@ -8,7 +8,6 @@ const path = require('path');
 require("dotenv").config();
 //---------------------------------------
 const PORT = process.env.PORT || 3000;
-console.log(process.env.MYSQL_NOTES);
 const token_mysql = process.env.MYSQL_NOTES.split("|");
 //---------------------------------------
 const pool = mysql.createPool({
