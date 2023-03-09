@@ -2,9 +2,9 @@ import { User } from "./modules/user.js";
 import { Note } from "./modules/note.js";
 import { Folder } from "./modules/folder.js";
 import { sendNotification, getItemTypeLevel } from "./utils/functions.js";
-//========================================
-startPage();
-//========================================
+//================================================
+$(document).ready(startPage);
+//================================================
 function startPage() {
    initializeButtons();
 
@@ -18,12 +18,11 @@ function startPage() {
    }
 
    window.onscroll = function () {
-      const footer = document.getElementsByClassName("footer-background")[0];
-      if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) footer.style.display = "block";
-      else footer.style.display = "none";
+      if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) $(".footer-background").show();
+      else $(".footer-background").hide();
    };
 }
-//========================================
+//================================================
 function initializeButtons() {
    //----------Open About----------
    $("#about").click(() => {
@@ -181,10 +180,6 @@ function renderNotLoggedPage() {
    $(".about-container").show();
 }
 //================================================
-
-
-
-
 async function generateCountries() {
    const list = await axios.get("https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json");
    //--------------------------------
