@@ -34,14 +34,6 @@ function startPage() {
       generateCountries();
    }
 
-
-
-
-
-
-
-
-
    window.onscroll = function () {
       const footer = document.getElementsByClassName("footer-background")[0];
       if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) footer.style.display = "block";
