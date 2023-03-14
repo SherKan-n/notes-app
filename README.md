@@ -7,12 +7,13 @@ This website also allows you to create folders to organize your notes in the way
 Registration and authentication on the website allow you to save your notes and folders and access them from anywhere. In addition, we have an intuitive and easy-to-use interface that allows you to add, edit, or delete notes and folders with ease.
 
 # Categories
-Informative
-Urgent
-<span style="color: rgba(0, 0, 255, 0.8);">Important</span>
-Normal
-Completed
-Folders
+- Informative
+- Urgent
+- Important
+- Normal
+- Completed
+
+# Folders
 Create folders to organize your notes in the way you want to see them.
 
 # Registration & Authentication
