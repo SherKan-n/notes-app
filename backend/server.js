@@ -201,6 +201,7 @@ function getUserCount(email, connection) {
    return new Promise((res, rej) => {
       connection.query("SELECT * FROM `users` WHERE `email` = '" + email + "'", function (err, result) {
          if (!err) res(result.length);
+         else rej(1);
       });
    });
 }
