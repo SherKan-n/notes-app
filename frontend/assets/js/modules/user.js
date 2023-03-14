@@ -25,6 +25,7 @@ class User {
             delete data.password;
 
             User.closeRegister();
+            User.loginUser(userData);
             localStorage.setItem("loginDetails", JSON.stringify(data));
             delayReload(0.5);
          }

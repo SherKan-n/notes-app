@@ -562,10 +562,19 @@ body {
   max-width: 500px;
   width: 100%;
   transition: all 0.5s ease-in-out;
+  animation: big 7s infinite ease-in-out;
 }
 
-.about-container img:hover {
-  transform: scale(1.1);
+@keyframes big {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ---------- FOOTER ---------- */
