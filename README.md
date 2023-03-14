@@ -9,7 +9,7 @@ Registration and authentication on the website allow you to save your notes and 
 # Categories
 Informative
 Urgent
-Important
+<span style="color: rgba(0, 0, 255, 0.8);">Important</span>
 Normal
 Completed
 Folders
