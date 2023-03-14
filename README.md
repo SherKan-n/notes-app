@@ -6,20 +6,20 @@ This website also allows you to create folders to organize your notes in the way
 
 Registration and authentication on the website allow you to save your notes and folders and access them from anywhere. In addition, we have an intuitive and easy-to-use interface that allows you to add, edit, or delete notes and folders with ease.
 
-# Categories
+## Categories
 - Informative
 - Urgent
 - Important
 - Normal
 - Completed
 
-# Folders
+## Folders
 Create folders to organize your notes in the way you want to see them.
 
-# Registration & Authentication
+## Registration & Authentication
 Registration and authentication allow you to save your notes and folders and access them from anywhere.
 
-# Intuitive Interface
+## Intuitive Interface
 We have an intuitive and easy-to-use interface that allows you to add, edit, or delete notes and folders with ease.
 
 Thank you for choosing Note App!
