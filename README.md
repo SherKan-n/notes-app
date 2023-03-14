@@ -1,1 +1,1 @@
-# Note Website Appplication - JavaScript Modules
+# Notes Web Appplication - JavaScript Modules
