@@ -195,6 +195,10 @@ app.get('/notes/folder/get/notes/:folderID/:uid', (req, res) => {
    });
 });
 //---------------------------------------
+app.use(function (req, res) {
+	if (!req.route) return res.redirect('/');
+});
+//---------------------------------------
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 //==============================================================================
 function getUserCount(email, connection) {
